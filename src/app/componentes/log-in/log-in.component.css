@@ -1,3 +1,7 @@
+#welcometext {
+    font-size: xx-large;
+}
+
 .divider:after,
 .divider:before {
     content: "";
@@ -6,13 +10,9 @@
     background: #eee;
 }
 
-.h-custom {
-    height: calc(100% - 73px);
+#loginbutton {
+    width: 100%;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    cursor: pointer;
 }
-
-@media (max-width: 450px) {
-    .h-custom {
-    height: 100%;
-    }
-}
-
