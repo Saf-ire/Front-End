@@ -1,7 +1,7 @@
-/* cambiar tipo de letra */
+/* /* /* cambiar tipo de letra */
 nav.navbar ul.nav li {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+} 
  
 /* cambiar el color de fondo a la barra */
 nav.navbar {
@@ -14,3 +14,4 @@ nav.navbar {
 nav.navbar {
     z-index: 9999;
 }
+
