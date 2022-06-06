@@ -11,6 +11,7 @@ import { LogInComponent } from './componentes/log-in/log-in.component';
 import { SignUpComponent } from './componentes/sign-up/sign-up.component';
 import { CommentsComponent } from './componentes/comments/comments.component';
 import { CameraComponent } from './componentes/camera/camera.component';
+import { PsyhoPerfilComponent } from './componentes/psyho-perfil/psyho-perfil.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CameraComponent } from './componentes/camera/camera.component';
     LogInComponent,
     SignUpComponent,
     CommentsComponent,
-    CameraComponent
+    CameraComponent,
+    PsyhoPerfilComponent
   ],
   imports: [
     BrowserModule,
