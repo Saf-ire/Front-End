@@ -10,6 +10,7 @@ import { ServicesComponent } from './componentes/services/services.component';
 import { LogInComponent } from './componentes/log-in/log-in.component';
 import { SignUpComponent } from './componentes/sign-up/sign-up.component';
 import { CommentsComponent } from './componentes/comments/comments.component';
+import { CameraComponent } from './componentes/camera/camera.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CommentsComponent } from './componentes/comments/comments.component';
     ServicesComponent,
     LogInComponent,
     SignUpComponent,
-    CommentsComponent
+    CommentsComponent,
+    CameraComponent
   ],
   imports: [
     BrowserModule,
