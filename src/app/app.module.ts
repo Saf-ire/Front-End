@@ -27,6 +27,7 @@ import { PatientProfileComponent } from './componentes/patient-profile/patient-p
     CameraComponent,
     PsyhoPerfilComponent,
     PatientProfileComponent
+
   ],
   imports: [
     BrowserModule,
