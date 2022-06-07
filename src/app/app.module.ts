@@ -12,6 +12,7 @@ import { SignUpComponent } from './componentes/sign-up/sign-up.component';
 import { CommentsComponent } from './componentes/comments/comments.component';
 import { CameraComponent } from './componentes/camera/camera.component';
 import { PsyhoPerfilComponent } from './componentes/psyho-perfil/psyho-perfil.component';
+import { PatientProfileComponent } from './componentes/patient-profile/patient-profile.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PsyhoPerfilComponent } from './componentes/psyho-perfil/psyho-perfil.co
     SignUpComponent,
     CommentsComponent,
     CameraComponent,
-    PsyhoPerfilComponent
+    PsyhoPerfilComponent,
+    PatientProfileComponent
   ],
   imports: [
     BrowserModule,
