@@ -6,8 +6,9 @@
     <div id="age">Age: -</div>
     <div id="gender">Gender: -</div>
     <div id="emotion">Emotion: -</div>
-    <div>
-      <video id="video" playsinline autoplay></video>
+    <div class="video-container" *ngIf="!error">
+      <video #video id="video"  [width]="WIDTH" [height]="HEIGHT"
+      playsinline autoplay></video>
     </div>  
     <div class="wrapper">
       <canvas class="charts" id="chart"></canvas>
