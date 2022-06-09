@@ -36,7 +36,7 @@ header {
 /* n */
 header .textos-header{
     display: flex;
-    height: 430px;
+    height: 90%;
     width: 100%;
     align-items: center;
     justify-content: center;
