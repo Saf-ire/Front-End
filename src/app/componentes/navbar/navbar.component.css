@@ -6,7 +6,7 @@ nav.navbar ul.nav li {
 /* cambiar el color de fondo a la barra */
 nav.navbar {
     display: flex;
-    background-color: #83c76e;
+    background-color: #0e7c7b;
     position: fixed;
     width: 100%;
     height: 64px;
