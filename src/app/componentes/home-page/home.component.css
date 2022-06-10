@@ -29,14 +29,6 @@ header .textos-header {
   color: #fff;
 }
 
-.contenedor {
-  padding: 30px 0;
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-  overflow: hidden;
-}
-
 .titulo {
   color: #050e08;
   font-size: 30px;
@@ -61,12 +53,12 @@ header .textos-header {
 
 .servicio-ind {
   width: 28%;
+  padding: 2%;
   text-align: center;
 }
 
 footer {
   background: #3a3a3a;
-  padding: 20px 0 0px 0;
   margin: auto;
   overflow: hidden;
 }

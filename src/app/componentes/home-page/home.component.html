@@ -35,22 +35,22 @@
     </header>
 
     <div id="services"></div>
-    <h2 class="title fs- text-center py-5">Services</h2>
-    <div class="container">
-      <div class="row vh-100 row-cols-2">
-        <div class="col">
+    <h2 class="title fs-1 text-center py-5">Services</h2>
+    <div class="container pb-5">
+      <div class="row row-cols-2">
+        <div class="col d-flex flex-column justify-content-center text-center">
           <div class="mb-3" style="max-width: 540px">
             <div class="row g-0">
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title fs-3">FaceTrackEmotions</h5>
-                  <p class="card-text fs-5">
+              <div class="col">
+                <div class="col">
+                  <h5 class="fs-3">FaceTrackEmotions</h5>
+                  <p class="fs-5">
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content. This content is a little bit
                     longer.
                   </p>
                   <button
-                    href="http://localhost:3000"
+                    routerLink="camera"
                     class="btn btn-outline-secondary"
                     type="button"
                   >
@@ -61,31 +61,19 @@
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="col-md-4">
-            <img
-              src="/assets/img/facerecog.png"
-              class="img-fluid"
-              alt="responsive image"
-            />
-          </div>
+        <div class="col d-flex flex-column text-center">
+          <img src="/assets/img/emotions.jpg" class="img-fluid" alt="..." />
         </div>
-        <div class="col">
-          <div class="col-md-4">
-            <img
-              src="/assets/img/files.png"
-              class="img-fluid"
-              alt="responsive image"
-            />
-          </div>
+        <div class="col d-flex flex-column text-center">
+          <img src="/assets/img/folder.jpg" class="img-fluid" alt="..." />
         </div>
-        <div class="col">
+        <div class="col d-flex flex-column justify-content-center text-center">
           <div class="mb-3" style="max-width: 540px">
             <div class="row g-0">
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title fs-3">Online Files</h5>
-                  <p class="card-text fs-5">
+              <div class="col">
+                <div class="col">
+                  <h5 class="fs-3">Online Files</h5>
+                  <p class="fs-5">
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content. This content is a little bit
                     longer.
@@ -99,8 +87,8 @@
     </div>
 
     <section class="about-services">
-      <div class="contenedor" id="contact">
-        <h2 class="titulo">Contact</h2>
+      <div class="container h-100" id="contact">
+        <h2 class="titulo pt-5">Contact</h2>
         <div class="servicio-cont">
           <div class="servicio-ind">
             <svg
