@@ -1,6 +1,21 @@
 #commentbutton {
-    width: 100%;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    cursor: pointer;
+  width: 100%;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+footer {
+  background: #3a3a3a;
+  margin: auto;
+  overflow: hidden;
+}
+
+.contenedor-footer {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc;
 }
