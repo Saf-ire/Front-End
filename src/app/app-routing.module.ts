@@ -6,6 +6,7 @@ import { SignUpComponent } from './componentes/sign-up/sign-up.component';
 import { CommentsComponent } from './componentes/comments/comments.component';
 import { CameraComponent } from './componentes/camera/camera.component';
 import { PsyhoPerfilComponent } from './componentes/psyho-perfil/psyho-perfil.component';
+import { ErrorpageComponent } from'./componentes/errorpage/errorpage.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'comments', component: CommentsComponent },
   { path: 'camera', component: CameraComponent },
   { path: 'psyho-perfil', component: PsyhoPerfilComponent },
+  { path: 'errorpage', component: ErrorpageComponent}
 ];
 
 @NgModule({
