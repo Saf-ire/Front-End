@@ -33,7 +33,6 @@ import { ErrorpageComponent } from './componentes/errorpage/errorpage.component'
     AppRoutingModule,
     HttpClientModule
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
