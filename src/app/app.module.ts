@@ -11,7 +11,8 @@ import { CommentsComponent } from './componentes/comments/comments.component';
 import { CameraComponent } from './componentes/camera/camera.component';
 import { PsyhoPerfilComponent } from './componentes/psyho-perfil/psyho-perfil.component';
 import { PatientProfileComponent } from './componentes/patient-profile/patient-profile.component';
-import { HttpClientModule } from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
+import { ErrorpageComponent } from './componentes/errorpage/errorpage.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +26,13 @@ import { HttpClientModule } from '@angular/common/http';
     CameraComponent,
     PsyhoPerfilComponent,
     PatientProfileComponent,
+    ErrorpageComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
