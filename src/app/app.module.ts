@@ -13,6 +13,8 @@ import { PsyhoPerfilComponent } from './componentes/psyho-perfil/psyho-perfil.co
 import { PatientProfileComponent } from './componentes/patient-profile/patient-profile.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ErrorpageComponent } from './componentes/errorpage/errorpage.component';
+import { LoadscriptService } from './services/loadscript.service';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,7 @@ import { ErrorpageComponent } from './componentes/errorpage/errorpage.component'
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [LoadscriptService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
