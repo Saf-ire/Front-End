@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsersService {
-  private readonly mainURL =`/${environment.apiURL} `;
+  private readonly mainURL =`${environment.apiURL}`;
   private signUp = '/api/signup/'
 
   constructor(private http: HttpClient) { }
