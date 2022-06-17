@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ComponentesComponent } from './componentes/componentes.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { HomeComponent } from './componentes/home-page/home.component';
 import { LogInComponent } from './componentes/log-in/log-in.component';
@@ -16,7 +16,6 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    ComponentesComponent,
     HomeComponent,
     NavbarComponent,
     LogInComponent,
@@ -26,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     PsyhoPerfilComponent,
     PatientProfileComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule,ReactiveFormsModule,BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
 })
