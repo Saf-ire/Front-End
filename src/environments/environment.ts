@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  title:"Heroku enviroment",
+  apiURL:"https://ekmind-api.herokuapp.com"
 };
 
 /*

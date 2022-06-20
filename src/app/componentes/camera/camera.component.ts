@@ -1,4 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { LoadscriptService } from 'src/app/services/loadscript.service';
+
 @Component({
   selector: 'app-camera',
   templateUrl: './camera.component.html',
@@ -10,7 +12,11 @@ export class CameraComponent implements AfterViewInit{
   @ViewChild("video")
   public video!: ElementRef;
   error: any;
-  constructor() {};
+  constructor(private loadScript: LoadscriptService
+    ) {
+    loadScript.load(["emotions"]);
+    loadScript.load(["charts"]);
+  };
   async ngAfterViewInit() {
     await this.setupDevices();
   }
