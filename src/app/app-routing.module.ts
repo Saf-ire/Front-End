@@ -8,6 +8,8 @@ import { CameraComponent } from './componentes/camera/camera.component';
 import { PsyhoPerfilComponent } from './componentes/psyho-perfil/psyho-perfil.component';
 import { ErrorpageComponent } from'./componentes/errorpage/errorpage.component';
 import { PatientProfileComponent } from './componentes/patient-profile/patient-profile.component';
+import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+
   
 
 const routes: Routes = [
