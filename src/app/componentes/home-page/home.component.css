@@ -29,7 +29,7 @@ header .textos-header {
   color: #fff;
 }
 
-.titulo {
+.titulo /* contacto */ {
   color: #050e08;
   font-size: 30px;
   text-align: center;
@@ -63,13 +63,6 @@ footer {
   overflow: hidden;
 }
 
-.contenedor-footer {
-  display: flex;
-  width: 50%;
-  justify-content: space-evenly;
-  margin: auto;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #ccc;
-}
+
 
 
