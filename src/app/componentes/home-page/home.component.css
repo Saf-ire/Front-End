@@ -29,6 +29,13 @@ header .textos-header {
   color: #fff;
 }
 
+.titulo /* contacto */ {
+  color: #050e08;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
 .wave {
   position: absolute;
   bottom: 0;
@@ -44,4 +51,7 @@ footer {
   margin: auto;
   overflow: hidden;
 }
+
+
+
 
