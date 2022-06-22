@@ -8,9 +8,10 @@ import { Observable } from 'rxjs';
 })
 export class UsersService {
   private readonly mainURL =`${environment.apiURL}`;
-  private signUp = '/api/signup/'
+  private signUp = 'api/signup'
 
   constructor(private http: HttpClient) { }
+  
   postUser(user : any){
    return this.http.post(this.mainURL + this.signUp, user);
   }
