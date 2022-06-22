@@ -6,8 +6,8 @@ import { SignUpComponent } from './componentes/sign-up/sign-up.component';
 import { CommentsComponent } from './componentes/comments/comments.component';
 import { CameraComponent } from './componentes/camera/camera.component';  
 import { PatientProfileComponent } from './componentes/patient-profile/patient-profile.component';
-import { ErrorpageComponent } from './componentes/errorpage/errorpage.component';
 import { PsychologistProfileComponent } from './componentes/psychologist-profile/psychologist-profile.component';
+import { ErrorpageComponent } from './componentes/errorpage/errorpage.component';
 
 
 const routes: Routes = [
@@ -17,8 +17,9 @@ const routes: Routes = [
   { path: 'comments', component: CommentsComponent },
   { path: 'camera', component: CameraComponent },
   { path: 'patient-profile', component: PatientProfileComponent},
-  { path: '**', component: ErrorpageComponent},
   { path: 'profile', component: PsychologistProfileComponent},
+  { path: '**', component: ErrorpageComponent},
+  
 ];
 
 @NgModule({
