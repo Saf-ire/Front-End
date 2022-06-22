@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UsersService } from 'src/services/users.service';
+import { UsersService } from 'src/services/users/users.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -31,6 +31,7 @@ export class SignUpComponent implements OnInit {
     }
     this._registerUser.postUser(user).subscribe(data => {
       this.form.reset();
+      console.log("User added succesfully");
     }, error => {
       console.log(error);
     })

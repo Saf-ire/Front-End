@@ -4,13 +4,11 @@ import { HomeComponent } from './componentes/home-page/home.component';
 import { LogInComponent } from './componentes/log-in/log-in.component';
 import { SignUpComponent } from './componentes/sign-up/sign-up.component';
 import { CommentsComponent } from './componentes/comments/comments.component';
-import { CameraComponent } from './componentes/camera/camera.component';
-import { PsyhoPerfilComponent } from './componentes/psyho-perfil/psyho-perfil.component';
-import { ErrorpageComponent } from'./componentes/errorpage/errorpage.component';
+import { CameraComponent } from './componentes/camera/camera.component';  
 import { PatientProfileComponent } from './componentes/patient-profile/patient-profile.component';
-import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { ErrorpageComponent } from './componentes/errorpage/errorpage.component';
+import { PsychologistProfileComponent } from './componentes/psychologist-profile/psychologist-profile.component';
 
-  
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -18,9 +16,9 @@ const routes: Routes = [
   { path: 'sign-up', component: SignUpComponent },
   { path: 'comments', component: CommentsComponent },
   { path: 'camera', component: CameraComponent },
-  { path: 'psyho-perfil', component: PsyhoPerfilComponent },
   { path: 'patient-profile', component: PatientProfileComponent},
-  { path: '**', component: ErrorpageComponent}
+  { path: '**', component: ErrorpageComponent},
+  { path: 'profile', component: PsychologistProfileComponent},
 ];
 
 @NgModule({
