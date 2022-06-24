@@ -8,19 +8,21 @@ import { AuthService } from 'src/services/authe/auth.service';
 })
 export class NavbarComponent implements OnInit {
 
-  isUserAuthenticated = true;
-  
   constructor() { }
-  
+
   ngOnInit(): void { }
 
-  public authenticate() {
-    this.isUserAuthenticated = false;
-    return  this.isUserAuthenticated;
-  }
-  public deauthenticate() {
-    this.isUserAuthenticated = true;
-    return  this.isUserAuthenticated;
+  checkLogIn() {
+    if (localStorage.getItem('auth_token') != null) {
+      console.log(localStorage.getItem('auth_token'))
+      return true;
+    } else {
+      console.log(localStorage.getItem('auth_token'))
+      return false;
+    }
   }
 
+  logOut() {
+    localStorage.removeItem('auth_token');
+  }
 }
