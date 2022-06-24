@@ -14,10 +14,8 @@ export class NavbarComponent implements OnInit {
 
   checkLogIn() {
     if (localStorage.getItem('auth_token') != null) {
-      console.log(localStorage.getItem('auth_token'))
       return true;
     } else {
-      console.log(localStorage.getItem('auth_token'))
       return false;
     }
   }
