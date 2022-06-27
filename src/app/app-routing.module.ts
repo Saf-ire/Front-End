@@ -11,6 +11,9 @@ import { ErrorpageComponent } from './componentes/errorpage/errorpage.component'
 
 
 const routes: Routes = [
+  {path: '',   // Ruta sin componente
+    children: [
+
   { path: '', component: HomeComponent},
   { path: 'log-in', component: LogInComponent },
   { path: 'sign-up', component: SignUpComponent },
@@ -19,6 +22,7 @@ const routes: Routes = [
   { path: 'patient-profile', component: PatientProfileComponent},
   { path: 'profile', component: PsychologistProfileComponent},
   { path: '**', component: ErrorpageComponent},
+]}
   
 ];
 

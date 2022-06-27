@@ -10,7 +10,9 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void { }
+  ngOnInit(){
+    console.log("Hola")
+   }
 
   checkLogIn() {
     if (localStorage.getItem('auth_token') != null) {
