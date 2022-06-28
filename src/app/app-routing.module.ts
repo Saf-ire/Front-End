@@ -7,6 +7,7 @@ import { CommentsComponent } from './componentes/comments/comments.component';
 import { CameraComponent } from './componentes/camera/camera.component';  
 import { PatientProfileComponent } from './componentes/patient-profile/patient-profile.component';
 import { PsychologistProfileComponent } from './componentes/psychologist-profile/psychologist-profile.component';
+import { ExpedientComponent } from './componentes/expedient/expedient.component';
 import { ErrorpageComponent } from './componentes/errorpage/errorpage.component';
 
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'camera', component: CameraComponent },
   { path: 'patient-profile', component: PatientProfileComponent},
   { path: 'profile', component: PsychologistProfileComponent},
+  { path: 'expedient', component: ExpedientComponent },
   { path: '**', component: ErrorpageComponent},
 ]}
   
