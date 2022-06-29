@@ -1,83 +1,76 @@
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
 <body>
-    <section>
-      <div class="container py-4">
-        <div class="sticky-top row vh-100 justify-content-around align-items-center">
-          <div class="col-lg-5">
-            <div class=" mb-4">
-              <div class="card-body text-center">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
-                  class="rounded-circle img-fluid" style="width: 200px" />
-                <h5 class="my-3 fs-1">John Doe</h5>
-                <p class="text-muted mb-1 fs-3">Patient</p>
-              </div>
-            </div>
+  <div class="container">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-8">
+            <h2>Employee Details</h2>
           </div>
-          <div class="col-lg-7">
-            <div class="card mb-4">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-3">
-                    <p class="my-2 fs-4">Full Name</p>
-                  </div>
-                  <div class="col-sm-9 text-center">
-                    <p class="text-muted my-2 fs-4">Johnatan Smith</p>
-                  </div>
-                </div>
-                <hr />
-                <div class="row">
-                  <div class="col-sm-3">
-                    <p class="my-2 fs-4">Email</p>
-                  </div>
-                  <div class="col-sm-9 text-center">
-                    <p class="text-muted my-2 fs-4">example@gmail.com</p>
-                  </div>
-                </div>
-                <hr />
-                <div class="row">
-                  <div class="col-sm-3">
-                    <p class="my-2 fs-4">Mobile</p>
-                  </div>
-                  <div class="col-sm-9 text-center">
-                    <p class="text-muted my-2 fs-4">(614) 765-4321</p>
-                  </div>
-                </div>
-                <hr />
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="my-2 fs-4">Mobile</p>
-                    </div>
-                    <div class="col-sm-9 text-center">
-                      <p class="text-muted my-2 fs-4">(614) 765-4321</p>
-                    </div>
-                  </div>
-                  <hr />
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="my-2 fs-4">Mobile</p>
-                    </div>
-                    <div class="col-sm-9 text-center">
-                      <p class="text-muted my-2 fs-4">(614) 765-4321</p>
-                    </div>
-                  </div>
-                  <hr />
-                <div class="row">
-                  <div class="col-sm-3">
-                    <p class="my-2 fs-4">Address</p>
-                  </div>
-                  <div class="col-sm-9 text-center">
-                    <p class="text-muted my-2 fs-4">Bay Area, San Francisco, CA</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
           </div>
         </div>
       </div>
-    </section>
-  </body>
-  <footer class="flex-md-row text-md-start py-4 px-4 px-xl-5">
-    <!-- Copyright -->
-    <div class="text-white text-center mb-3 mb-md-0">
-      Copyright © 2020. All rights reserved.
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Phone</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>Administration</td>
+            <td>(171) 555-2222</td>
+            <td>
+              <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+              <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+              <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+              <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Peter Parker</td>
+            <td>Customer Service</td>
+            <td>(313) 555-5735</td>
+            <td>
+              <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+              <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+              <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+              <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Fran Wilson</td>
+            <td>Human Resources</td>
+            <td>(503) 555-9931</td>
+            <td>
+              <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+              <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+              <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+              <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Franco Mayorca</td>
+            <td>Human Kiler</td>
+            <td>(503) 555-9931</td>
+            <td>
+              <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+              <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+              <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+              <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </footer>
+  </div>
+</body>
