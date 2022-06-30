@@ -38,7 +38,7 @@ table.table th i {
 }
 
 table.table th:last-child {
-    width: 100px;
+    width: 120px;
 }
 
 table.table td a {
