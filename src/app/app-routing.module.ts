@@ -8,21 +8,21 @@ import { CameraComponent } from './componentes/camera/camera.component';
 import { PatientProfileComponent } from './componentes/patient-profile/patient-profile.component';
 import { PsychologistProfileComponent } from './componentes/psychologist-profile/psychologist-profile.component';
 import { ExpedientComponent } from './componentes/expedient/expedient.component';
+import {AuthService} from '../services/authe/auth.service';
 import { ErrorpageComponent } from './componentes/errorpage/errorpage.component';
 
 
 const routes: Routes = [
   {path: '',   // Ruta sin componente
     children: [
-
   { path: '', component: HomeComponent},
   { path: 'log-in', component: LogInComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'comments', component: CommentsComponent },
   { path: 'camera', component: CameraComponent },
   { path: 'patient-profile', component: PatientProfileComponent},
-  { path: 'profile', component: PsychologistProfileComponent},
   { path: 'expedient', component: ExpedientComponent },
+  { path: 'profile',component: PsychologistProfileComponent },
   { path: '**', component: ErrorpageComponent},
 ]}
   

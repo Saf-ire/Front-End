@@ -23,7 +23,7 @@ export class AuthService {
   }
  
   public get logIn(): boolean {
-    return (localStorage.getItem('token') !== null);
+    return (localStorage.getItem('auth_token') !== null);
   }
 
 }
