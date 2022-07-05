@@ -13,7 +13,7 @@ export class AuthService {
   logUser(email: string, password: string) {
     this.http.post(this.mainURL + 'api/login', { email: email, password: password }).subscribe((resp: any) => {
 
-      this.router.navigate(['profile']);
+      this.router.navigate(['expedient']);
       localStorage.setItem('auth_token', resp.token);
     })
   }

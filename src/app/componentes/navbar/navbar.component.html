@@ -35,6 +35,11 @@
             Log Out
           </button>
         </div>
+        <div class="d-grid gap-2 d-md-block"  *ngIf="checkLogIn() === true">
+          <button routerLink="profile" class="btn btn-outline-light btn-sm" type="button" style="margin-right: 25px">
+            Profile
+          </button>
+        </div>
       </div>
     </div>
   </nav>
