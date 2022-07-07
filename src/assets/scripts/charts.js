@@ -144,7 +144,7 @@ const EMOTIONS = [
       }
     }
   }
-  //  export {EmoChart};
+
   const el = document.getElementById('chart');
   let startTime = Date.now();
   let noDataTimeOut;
