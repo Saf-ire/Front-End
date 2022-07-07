@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
@@ -9,21 +10,22 @@ import { environment } from 'src/environments/environment';
 export class AuthService {
   private readonly mainURL = `${environment.apiURL}`;
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router, private toastr: ToastrService) { }
   logUser(email: string, password: string) {
-    this.http.post(this.mainURL + 'api/login', { email: email, password: password}).subscribe((resp: any) => {
+    this.http.post(this.mainURL + 'api/login', { email: email, password: password }).subscribe((resp: any) => {
 
-      this.router.navigate(['profile']);
-      localStorage.setItem('jwt', resp.token);
+      this.router.navigate(['expedient']);
+      localStorage.setItem('auth_token', resp.token);
+      this.toastr.success("You are logged in")
     })
   }
 
   logOut() {
-    localStorage.removeItem('jwt');
+    localStorage.removeItem('auth_token');
   }
  
   public get logIn(): boolean {
-    return (localStorage.getItem('jwt') !== null);
+    return (localStorage.getItem('auth_token') !== null);
   }
 
 }

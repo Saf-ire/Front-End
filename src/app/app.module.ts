@@ -12,6 +12,9 @@ import { CameraComponent } from './componentes/camera/camera.component';
 import { PatientProfileComponent } from './componentes/patient-profile/patient-profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PsychologistProfileComponent } from './componentes/psychologist-profile/psychologist-profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { ExpedientComponent } from './componentes/expedient/expedient.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +27,9 @@ import { PsychologistProfileComponent } from './componentes/psychologist-profile
     CameraComponent,
     PatientProfileComponent,
     PsychologistProfileComponent,
+    ExpedientComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule,ReactiveFormsModule,BrowserModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule,ReactiveFormsModule,BrowserModule, BrowserAnimationsModule, ToastrModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent],
 })

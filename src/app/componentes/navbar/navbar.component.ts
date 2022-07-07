@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/services/authe/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,19 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    console.log("Hola")
+   }
+
+  checkLogIn() {
+    if (localStorage.getItem('auth_token') != null) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
+  logOut() {
+    localStorage.removeItem('auth_token');
+  }
 }
