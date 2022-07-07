@@ -16,7 +16,7 @@ const routes: Routes = [
   {
     path: '',   // Ruta sin componente
     children: [
-      { path: '', component: HomeComponent },
+      { path: '', component: HomeComponent }, 
       { path: 'sign-up', component: SignUpComponent },
       { path: 'comments', component: CommentsComponent },
       { path: 'camera', component: CameraComponent },
