@@ -11,18 +11,19 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(){
-    console.log("Hola")
    }
 
   checkLogIn() {
-    if (localStorage.getItem('auth_token') != null) {
+    if (localStorage.getItem('jwt') != null) {
       return true;
     } else {
       return false;
     }
   }
 
+
+
   logOut() {
-    localStorage.removeItem('auth_token');
+    localStorage.removeItem('jwt');
   }
 }

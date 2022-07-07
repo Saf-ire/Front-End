@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Doctor } from 'src/app/interfaces/doctor.interface';
+import { AuthService } from 'src/services/authe/auth.service';
 
 @Component({
   selector: 'app-expedient',
@@ -7,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExpedientComponent implements OnInit {
 
-  constructor() { }
+  user:Doctor|any;
+
+  constructor(private auth:AuthService) { }
 
   ngOnInit(): void {
+    this.user = this.auth.user
   }
-
 }
 
 
