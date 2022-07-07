@@ -16,6 +16,7 @@ export class CameraComponent implements AfterViewInit{
     ) {
     loadScript.load(["emotions"]);
     loadScript.load(["charts"]);
+    loadScript.load(["selectcamera"]);
   };
   async ngAfterViewInit() {
     await this.setupDevices();
