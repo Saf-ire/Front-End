@@ -11,19 +11,19 @@ export class AuthService {
 
   constructor(private http: HttpClient, private router: Router) { }
   logUser(email: string, password: string) {
-    this.http.post(this.mainURL + 'api/login', { email: email, password: password }).subscribe((resp: any) => {
+    this.http.post(this.mainURL + 'api/login', { email: email, password: password}).subscribe((resp: any) => {
 
       this.router.navigate(['profile']);
-      localStorage.setItem('auth_token', resp.token);
+      localStorage.setItem('jwt', resp.token);
     })
   }
 
   logOut() {
-    localStorage.removeItem('token');
+    localStorage.removeItem('jwt');
   }
  
   public get logIn(): boolean {
-    return (localStorage.getItem('token') !== null);
+    return (localStorage.getItem('jwt') !== null);
   }
 
 }
