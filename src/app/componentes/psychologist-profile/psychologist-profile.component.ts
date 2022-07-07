@@ -8,6 +8,7 @@ import { Doctor } from 'src/app/interfaces/doctor.interface';
 })
 
 export class PsychologistProfileComponent implements OnInit {
+  users: any;
 
   user:Doctor|any;
 
