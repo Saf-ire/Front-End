@@ -1,25 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/models/user';
-import {UsersService} from '../../../services/users/users.service';
-import { ActivatedRoute } from '@angular/router';
-
+import { AuthService } from 'src/services/authe/auth.service';
+import { Doctor } from 'src/app/interfaces/doctor.interface';
 @Component({
   selector: 'app-psychologist-profile',
   templateUrl: './psychologist-profile.component.html',
   styleUrls: ['./psychologist-profile.component.css']
 })
 
-
 export class PsychologistProfileComponent implements OnInit {
   users: any;
 
-  constructor(public userService: UsersService, private actRoute: ActivatedRoute) {
+  user:Doctor|any;
 
-   }
-   
+  constructor(private auth:AuthService) { }
+  
   ngOnInit(): void {
-    this.userService.getUserById().subscribe(response => {
-      this.users = response.data
-      })
+    this.user = this.auth.user
   }
 }
