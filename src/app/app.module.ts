@@ -15,6 +15,7 @@ import { PsychologistProfileComponent } from './componentes/psychologist-profile
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ExpedientComponent } from './componentes/expedient/expedient.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -29,8 +30,17 @@ import { ExpedientComponent } from './componentes/expedient/expedient.component'
     PsychologistProfileComponent,
     ExpedientComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule,ReactiveFormsModule,BrowserModule, BrowserAnimationsModule, ToastrModule.forRoot()],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+  ],
+  providers: [CookieService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

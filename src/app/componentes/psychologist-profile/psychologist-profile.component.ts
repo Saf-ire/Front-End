@@ -1,19 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/services/authe/auth.service';
 import { Doctor } from 'src/app/interfaces/doctor.interface';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+
 @Component({
   selector: 'app-psychologist-profile',
   templateUrl: './psychologist-profile.component.html',
-  styleUrls: ['./psychologist-profile.component.css']
+  styleUrls: ['./psychologist-profile.component.css'],
 })
-
 export class PsychologistProfileComponent implements OnInit {
+  public user: Doctor | any;
+  private readonly mainURL = `${environment.apiURL}`;
 
-  user:Doctor|any;
+  constructor(private auth: AuthService, private http: HttpClient) {}
 
-  constructor(private auth:AuthService) { }
-  
+  session() {}
+
   ngOnInit(): void {
-    this.user = this.auth.user
+    this.http.get(this.mainURL + 'api/login').subscribe((resp: any) => {
+      console.log({ message: 'ngOnInit', response: resp });
+    });
+    if (this.auth.user) {
+      this.user = this.auth.user;
+    }
+  }
+
+  showUser() {
+    console.log(this.user);
+    this.http.get(this.mainURL + 'api/login').subscribe((resp: any) => {
+      console.log({ message: 'ngOnInit', response: resp });
+    });
   }
 }

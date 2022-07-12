@@ -35,7 +35,7 @@
             <a class="nav-link fs-6 text-light" href="#contact">CONTACT</a>
           </li>
         </ul>
-        <div class="d-grid gap-2 d-md-block" *ngIf="checkLogIn() === false">
+        <div class="d-grid gap-2 d-md-block" *ngIf="isLoggedIn() === false">
           <button
             routerLink="log-in"
             class="btn btn-outline-light btn-sm"
@@ -52,7 +52,7 @@
             Sign Up
           </button>
         </div>
-        <div class="d-grid gap-2 d-md-block" *ngIf="checkLogIn() === true">
+        <div class="d-grid gap-2 d-md-block" *ngIf="isLoggedIn() === true">
           <button
             routerLink=""
             (click)="logOut()"
@@ -63,7 +63,7 @@
             Log Out
           </button>
         </div>
-        <div class="d-grid gap-2 d-md-block" *ngIf="checkLogIn() === true">
+        <div class="d-grid gap-2 d-md-block" *ngIf="isLoggedIn() === true">
           <button
             routerLink="profile"
             class="btn btn-outline-light btn-sm"

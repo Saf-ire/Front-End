@@ -1,19 +1,37 @@
 .nav.navbar ul.nav li {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .divider:after,
 .divider:before {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: #eee;
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
 }
 
 #loginbutton {
-    width: 100%;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    cursor: pointer;
+  width: 100%;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  cursor: pointer;
 }
 
+.cookies {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.cookie_button {
+  margin: 20px 20px 0 0;
+  border-radius: 4px;
+  width: 100px;
+  background-color: #247aeb;
+  color: white;
+  border: hidden;
+  transition: 350ms;
+}
+.cookie_button:active {
+  background-color: #1068db;
+  box-shadow: 0px 0px 0px 4px #78b2ff;
+}
