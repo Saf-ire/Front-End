@@ -48,14 +48,24 @@
                 Login
               </button>
             </div>
-            <div class="cookies">
-              <button class="cookie_button border_button" (click)="setCookie()">
-                Set Cookie
-              </button>
-              <button class="cookie_button border_button">Get Cookie</button>
-            </div>
+            <div class="cookies"></div>
           </form>
+          <button class="cookie_button border_button" (click)="setCookie()">
+            Set Cookie
+          </button>
+          <button class="cookie_button border_button" (click)="checkCookie()">
+            Check Cookie
+          </button>
+          <button
+            class="cookie_button border_button clear-cookie"
+            (click)="clearCookie()"
+          >
+            Clear Cookie
+          </button>
         </div>
+        <button class="cookie_button get_cookie" (click)="getLocalCookie()">
+          Get Cookie
+        </button>
       </div>
     </div>
   </section>

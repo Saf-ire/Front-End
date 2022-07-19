@@ -12,6 +12,7 @@ import { AuthService } from 'src/services/authe/auth.service';
 })
 export class NavbarComponent implements OnInit {
   private readonly mainURL = `${environment.apiURL}`;
+  private readonly localURL = `${environment.localURL}`;
   constructor(
     private cookie: CookieService,
     private http: HttpClient,
@@ -21,23 +22,16 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {}
 
   isLoggedIn() {
-    if (!this.cookie.get('jwt')) {
+    if (!this.cookie.get('login')) {
       return false;
     } else {
       return true;
     }
-
-    //   while (this.cookie.get('jwt')) {
-    //     return true;
-    //   }
-
-    //   return false;
   }
 
   logOut() {
-    // localStorage.removeItem('jwt');
-    this.cookie.delete('jwt');
-    this.http.get(this.mainURL + 'api/logout').subscribe((resp: any) => {
+    this.cookie.delete('login');
+    this.http.get(this.localURL + 'api/logout').subscribe((resp: any) => {
       this.toastr.success(resp);
     });
   }

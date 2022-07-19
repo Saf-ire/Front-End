@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Doctor } from 'src/app/interfaces/doctor.interface';
@@ -12,6 +12,7 @@ import { CookieService } from 'ngx-cookie-service';
 export class AuthService {
   user: Doctor | any;
   private readonly mainURL = `${environment.apiURL}`;
+  private readonly localURL = `${environment.localURL}`;
   private time = 0.02;
 
   constructor(
@@ -22,27 +23,34 @@ export class AuthService {
   ) {}
   logUser(email: string, password: string) {
     this.http
-      .post(this.mainURL + 'api/login', { email: email, password: password })
-      .subscribe((resp: any) => {
-        console.log(resp);
-        this.user = resp.user;
-        this.toastr.success(resp.message);
+      .post(
+        this.localURL + 'api/login',
+        { email: email, password: password },
+        {
+          headers: new HttpHeaders({
+            'Content-Type': 'application/json',
+          }),
+          withCredentials: true,
+        }
+      )
+      .subscribe((res: any) => {
+        console.log(res);
+        this.user = res.user;
+        this.toastr.success(res.message);
         this.router.navigate(['expedient']);
-        localStorage.setItem('jwt', resp.token);
-        this.cookie.set('jwt', resp.token, this.time);
+        this.cookie.set('login', res.user);
       });
   }
 
   logOut() {
-    localStorage.removeItem('jwt');
-    this.http.get(this.mainURL + 'api/logout').subscribe((resp: any) => {
+    // localStorage.removeItem('jwt');
+    this.http.get(this.localURL + 'api/logout').subscribe((resp: any) => {
       this.toastr.success(resp);
     });
   }
 
   public get logIn(): boolean {
-    // return localStorage.getItem('jwt') !== null;
-    if (this.cookie.get('jwt')) return true;
+    if (this.cookie.get('login')) return true;
 
     return false;
   }

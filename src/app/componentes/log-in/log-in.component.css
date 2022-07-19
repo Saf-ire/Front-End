@@ -25,7 +25,7 @@
 .cookie_button {
   margin: 20px 20px 0 0;
   border-radius: 4px;
-  width: 100px;
+  width: 115px;
   background-color: #247aeb;
   color: white;
   border: hidden;
@@ -34,4 +34,10 @@
 .cookie_button:active {
   background-color: #1068db;
   box-shadow: 0px 0px 0px 4px #78b2ff;
+  user-select: none;
+}
+
+.get_cookie {
+  margin-top: 98px;
+  margin-left: 50px;
 }
